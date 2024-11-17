@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Post = void 0;
 const typeorm_1 = require("typeorm");
-//TODO Crie a entidade de Post
 const User_1 = require("./User");
 let Post = class Post {
 };
@@ -29,7 +28,7 @@ __decorate([
     __metadata("design:type", String)
 ], Post.prototype, "description", void 0);
 __decorate([
-    ManyToOne(() => User_1.User, (user) => user.posts),
+    (0, typeorm_1.ManyToOne)(() => User_1.User, user => user.posts),
     __metadata("design:type", User_1.User)
 ], Post.prototype, "user", void 0);
 exports.Post = Post = __decorate([

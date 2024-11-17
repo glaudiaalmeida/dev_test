@@ -1,6 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 
-//TODO Crie a entidade de Post
 import { User } from "./User";
 
 @Entity()
@@ -14,6 +13,6 @@ export class Post {
     @Column({ type: "varchar", length: 100 })
     description: string;
 
-    @ManyToOne(() => User, (user) => user.posts)
-    user: User;
+     @ManyToOne(() => User, user => user.posts)
+  user: User;
 }
