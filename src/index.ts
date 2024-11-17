@@ -1,8 +1,8 @@
-import 'reflect-metadata';
-import express from 'express';
-import { DataSource } from 'typeorm';
-import { User } from './entity/User';
-import { Post } from './entity/Post';
+import "reflect-metadata";
+import express from "express";
+import { DataSource } from "typeorm";
+import { User } from "./entity/User";
+import { Post } from "./entity/Post";
 
 const app = express();
 app.use(express.json());
